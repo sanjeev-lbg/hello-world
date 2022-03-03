@@ -5,8 +5,9 @@ pipeline{
     stages{
         stage('test1'){
             steps{
-                    echo WORKSPACE
-                    echo GIT_CHECKOUT_DIR
+                script{
+                    sh 'printenv'
+                }
             }
         }
     }
